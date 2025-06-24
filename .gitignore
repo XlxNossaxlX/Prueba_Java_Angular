@@ -1,0 +1,15 @@
+# Angular (Node)
+node_modules/
+dist/
+
+# Spring Boot (Java)
+target/
+*.class
+
+# IDEs / editores
+.idea/
+*.iml
+
+# Archivos del sistema
+.DS_Store
+
