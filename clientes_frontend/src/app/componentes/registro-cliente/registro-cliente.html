@@ -1,5 +1,4 @@
 <h1>Registro de Clientes</h1>
-<h4>Registrar cliente</h4>
 
 <form (ngSubmit)="registrarCliente()" #clienteForm="ngForm">
   <label for="documento">Documento:</label>
@@ -26,8 +25,8 @@
   <label for="ocupacion">Ocupación:</label>
   <select id="ocupacion" name="ocupacion" [(ngModel)]="cliente.ocupacion" required>
     <option value="">Seleccione una opción</option>
-    <option value="Estudiante">Estudiante</option>
     <option value="Empleado">Empleado</option>
+    <option value="Independiente">Independiente</option>
     <option value="Pensionado">Pensionado</option>
   </select>
 

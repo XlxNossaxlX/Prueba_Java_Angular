@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RegistroClienteComponent } from './componentes/registro-cliente/registro-cliente';
+import { RouterModule } from '@angular/router';
+import { ListarClientesComponent } from './componentes/listar-cliente/listar-clientes';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RegistroClienteComponent],
+  imports: [RouterModule],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

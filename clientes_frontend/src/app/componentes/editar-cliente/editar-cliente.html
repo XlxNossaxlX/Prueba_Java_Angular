@@ -1,0 +1,30 @@
+<h2>Editar Cliente</h2>
+
+<form (ngSubmit)="guardarCambios()">
+  <label>Documento:
+    <input type="text" [(ngModel)]="cliente.documento" name="documento" required />
+  </label><br />
+  <label>Nombre:
+    <input type="text" [(ngModel)]="cliente.nombre" name="nombre" required />
+  </label><br />
+  <label>Apellidos:
+    <input type="text" [(ngModel)]="cliente.apellidos" name="apellidos" required />
+  </label><br />
+  <label>Fecha de Nacimiento:
+    <input type="date" [(ngModel)]="cliente.fechaNacimiento" name="fechaNacimiento" type="date" />
+  </label><br />
+  <label>Ciudad:
+    <input type="text" [(ngModel)]="cliente.ciudad" name="ciudad" />
+  </label><br />
+  <label>Teléfono:
+    <input type="text" [(ngModel)]="cliente.telefono" name="telefono" />
+  </label><br />
+  <label>Correo Electrónico:
+    <input type="text" [(ngModel)]="cliente.correoElectronico" name="correoElectronico" type="email" required />
+  </label><br />
+  <label>Ocupación:
+    <input type="text" [(ngModel)]="cliente.ocupacion" name="ocupacion" />
+  </label><br /><br />
+
+  <button type="submit">Guardar Cambios</button>
+</form>
