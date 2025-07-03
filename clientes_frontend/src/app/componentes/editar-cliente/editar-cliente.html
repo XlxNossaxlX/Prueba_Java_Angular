@@ -1,30 +1,54 @@
-<h2>Editar Cliente</h2>
+<div class="formulario-container">
+  <h2>Editar Cliente</h2>
 
-<form (ngSubmit)="guardarCambios()">
-  <label>Documento:
-    <input type="text" [(ngModel)]="cliente.documento" name="documento" required />
-  </label><br />
-  <label>Nombre:
-    <input type="text" [(ngModel)]="cliente.nombre" name="nombre" required />
-  </label><br />
-  <label>Apellidos:
-    <input type="text" [(ngModel)]="cliente.apellidos" name="apellidos" required />
-  </label><br />
-  <label>Fecha de Nacimiento:
-    <input type="date" [(ngModel)]="cliente.fechaNacimiento" name="fechaNacimiento" type="date" />
-  </label><br />
-  <label>Ciudad:
-    <input type="text" [(ngModel)]="cliente.ciudad" name="ciudad" />
-  </label><br />
-  <label>Teléfono:
-    <input type="text" [(ngModel)]="cliente.telefono" name="telefono" />
-  </label><br />
-  <label>Correo Electrónico:
-    <input type="text" [(ngModel)]="cliente.correoElectronico" name="correoElectronico" type="email" required />
-  </label><br />
-  <label>Ocupación:
-    <input type="text" [(ngModel)]="cliente.ocupacion" name="ocupacion" />
-  </label><br /><br />
+  <form (ngSubmit)="guardarCambios()">
+    <label>Documento:
+      <input type="text" [(ngModel)]="cliente.documento" name="documento" required />
+    </label>
 
-  <button type="submit">Guardar Cambios</button>
-</form>
+    <label>Nombre:
+      <input type="text" [(ngModel)]="cliente.nombre" name="nombre" required />
+    </label>
+
+    <label>Apellidos:
+      <input type="text" [(ngModel)]="cliente.apellidos" name="apellidos" required />
+    </label>
+
+    <label>Fecha de Nacimiento:
+      <input type="date" [(ngModel)]="cliente.fechaNacimiento" name="fechaNacimiento" />
+    </label>
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Ciudad</mat-label>
+      <input type="text"
+             placeholder="Escribe una ciudad"
+             aria-label="Ciudad"
+             matInput
+             [formControl]="ciudadControl"
+             [matAutocomplete]="auto"
+             required>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let ciudad of filteredCiudades | async" [value]="ciudad">
+          {{ ciudad }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <label>Teléfono:
+      <input type="text" [(ngModel)]="cliente.telefono" name="telefono" />
+    </label>
+
+    <label>Correo Electrónico:
+      <input type="email" [(ngModel)]="cliente.correoElectronico" name="correoElectronico" required />
+    </label>
+
+    <select type="text" id="ocupacion" name="ocupacion" [(ngModel)]="cliente.ocupacion" required>
+      <option value="">Seleccione una opción</option>
+      <option value="Empleado">Empleado</option>
+      <option value="Independiente">Independiente</option>
+      <option value="Pensionado">Pensionado</option>
+    </select>
+
+    <div class="botones">
+      <button type="submit">Guardar Cambios</button>
+    </div>
+  </form>
+</div>

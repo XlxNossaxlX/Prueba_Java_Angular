@@ -1,0 +1,14 @@
+.tabla-container {
+  padding: 24px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}

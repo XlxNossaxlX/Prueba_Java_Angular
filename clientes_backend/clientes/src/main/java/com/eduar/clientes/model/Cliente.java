@@ -1,5 +1,4 @@
 package com.eduar.clientes.model;
-// Cambio de prueba
 import jakarta.persistence.*;
 import lombok.Data;
 

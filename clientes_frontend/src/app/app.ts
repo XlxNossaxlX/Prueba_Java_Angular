@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ListarClientesComponent } from './componentes/listar-cliente/listar-clientes';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterModule],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrls: ['./app.css'],
 })
 export class App {
   protected title = 'clientes-frontend';

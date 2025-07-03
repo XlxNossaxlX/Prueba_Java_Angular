@@ -7,4 +7,5 @@ export interface Cliente {
   telefono: string;
   correoElectronico: string,
   ocupacion: string;
+  esViable?: boolean;
 }

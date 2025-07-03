@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
-import { RegistroClienteComponent } from './componentes/registro-cliente/registro-cliente';
-import { ListarClientesComponent } from './componentes/listar-cliente/listar-clientes';
-import { EditarClienteComponent } from './componentes/editar-cliente/editar-cliente';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'listar-clientes', pathMatch: 'full' },
-    { path: 'listar-clientes', component: ListarClientesComponent },
-    { path: 'registro-cliente', component: RegistroClienteComponent },
-    { path: 'editar-cliente/:documento', component: EditarClienteComponent }
+    {path: '', redirectTo: 'listar-clientes', pathMatch: 'full'},
+    {path: 'listar-clientes', loadComponent: () => import('./componentes/listar-cliente/listar-clientes')
+        .then(m => m.ListarClientesComponent)},
+    {path: 'registro-cliente', loadComponent: () => import('./componentes/registro-cliente/registro-cliente')
+        .then(m => m.RegistroClienteComponent)
+    },
+    {path: 'editar-cliente/:documento', loadComponent: () => import('./componentes/editar-cliente/editar-cliente')
+        .then(m => m.EditarClienteComponent)
+    }
 ];

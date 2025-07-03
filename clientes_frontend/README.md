@@ -1,59 +1,46 @@
-# ClientesFrontend
+📋 Clientes Frontend - Aplicación Web Angular
+Este es el repositorio del frontend de la aplicación web desarrollada en Angular, que interactúa con un backend de Spring Boot para gestionar información de clientes.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+🚀 Descripción del Proyecto
+Esta aplicación web permite realizar las operaciones básicas de un CRUD (Crear, Leer, Actualizar, Eliminar) sobre la información de clientes. Además, incorpora funcionalidades específicas como la determinación de la viabilidad de un cliente según su edad y un campo de autocompletado para la ciudad.
 
-## Development server
+✨ Funcionalidades Implementadas
+Registro de Clientes, Listado de Clientes, Edición de Clientes, Eliminación de Clientes, Gestión de Viabilidad, Campo de Ciudad con Autocompletado, Manejo de Errores y Mensajes
 
-To start a local development server, run:
+🛠️ Tecnologías Utilizadas (Frontend)
+Angular: Framework para la construcción de la interfaz de usuario.
 
-```bash
-ng serve
-```
+TypeScript: Lenguaje de programación.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Angular Material: Biblioteca de componentes UI para un diseño limpio y moderno.
 
-## Code scaffolding
+MatTableModule
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+MatToolbarModule
 
-```bash
-ng generate component component-name
-```
+MatButtonModule
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+MatIconModule
 
-```bash
-ng generate --help
-```
+MatFormFieldModule
 
-## Building
+MatInputModule
 
-To build the project run:
+MatAutocompleteModule
 
-```bash
-ng build
-```
+HTML5: Estructura de la página web.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+CSS: Estilos y diseño responsivo.
 
-## Running unit tests
+RxJS: Para manejo de operaciones asíncronas (observables).
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+📋 Prerrequisitos
+Antes de ejecutar este proyecto, asegúrate de tener instalado:
 
-```bash
-ng test
-```
+Node.js y npm: Descargar Node.js (npm se instala con Node.js).
 
-## Running end-to-end tests
+Angular CLI: Instálalo globalmente ejecutando npm install -g @angular/cli.
 
-For end-to-end (e2e) testing, run:
+Backend de Spring Boot: Asegúrate de que el backend esté corriendo.
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+¡Gracias por revisar el proyecto!
